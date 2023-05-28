@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+
+:root{
+  --merry-font : font-family: 'Merriweather', serif;
+  --a-mono : font-family: 'Azeret Mono', monospace;
+  --moch-pop : font-family: 'Mochiy Pop One', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: black;
+
+  
+  font-family: 'Azeret Mono', monospace;
+  font-weight: 500;
+  font-size: 1em;
+  scroll-behavior: smooth;
+}
+
+.indexing {
+  z-index: -99;
+}
+
+/* background image start */
+
+/* body::before,body::after{
+  height: 100%;
+  width: 100%;
+} */
+
+body {
+  position: relative !important;
+
+  height: 100vh;
+  width: 100%;
+
+  background-color: #ffbd99;
+  background-image: radial-gradient(
+    at 14% 42%,
+      hsla(27, 90%, 67%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 69% 53%, hsla(76, 92%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 35% 95%, hsla(312, 78%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+  /* background-position: center; */
+  background-position: 300% 300%;
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+
+  animation: color 10s ease-in-out infinite;
+  overflow-x: hidden;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.animated_blob {
+  animation: blob_ani 10s ease-in-out infinite;
+  transition: 1s;
+}
+.animated_blob_1 {
+  animation: blob_ani_1 10s ease-in-out infinite;
+  transition: 1s;
+}
+
+@keyframes blob_ani {
+  0% {  
+    transform: translate(0%, 10%);
+  }
+  25% {
+    transform: translate(2%, 15%);
+  }
+  50% {
+    transform: translate(4%, 13%);
+  }
+  75% {
+    transform: translate(2%, 11%);
+  }
+  100% {
+    transform: translate(0%, 10%);
+  }
+}
+
+@keyframes blob_ani_1 {
+  0% {
+    transform: translate(0%, -10%);
+  }
+  25% {
+    transform: translate(-2%, -15%);
+  }
+  50% {
+    transform: translate(-4%, -13%);
+  }
+  75% {
+    transform: translate(-2%, -11%);
+  }
+  100% {
+    transform: translate(0%, -10%);
+  }
+}
+
+.blobss{
+  height: 100%;
+  width: 100%;
+  z-index: -99;
+  position: absolute;
+   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  
+}
+
+.magicpattern {
+  display: flex;
+  flex: 1;
+
+  position: absolute;
+  width: 40%;
+  height: 40%;
+
+  top: 0;
+  left: 0;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%234158D0%22%2F%3E%3Cstop offset=%2250%25%22 stop-color=%22%23C850C0%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23FFCC70%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M866.5 671.5Q773 843 597.5 843t-320-83Q133 677 157 512t138.5-286q114.5-121 276-69.5t275 197.5q113.5 146 20 317.5Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.35 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M866.5 671.5Q773 843 597.5 843t-320-83Q133 677 157 512t138.5-286q114.5-121 276-69.5t275 197.5q113.5 146 20 317.5Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+
+  
+}
+
+.magicpattern2 {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23FAD961%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23F76B1C%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M795 646.5q-61 146.5-230.5 230T259 821Q123 682 94 486.5T235.5 189Q406 87 604 104t225 206.5q27 189.5-34 336Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M795 646.5q-61 146.5-230.5 230T259 821Q123 682 94 486.5T235.5 189Q406 87 604 104t225 206.5q27 189.5-34 336Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+
+}
+
+.magicpattern3 {
+  display: flex;
+  flex: 1;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30%;
+  height: 30%;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%234158D0%22%2F%3E%3Cstop offset=%2250%25%22 stop-color=%22%23C850C0%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23ffcc70%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M819 672.5Q775 845 603 824t-294.5-97q-122.5-76-177-253.5t108.5-288Q403 75 602.5 98t230 212.5Q863 500 819 672.5Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M819 672.5Q775 845 603 824t-294.5-97q-122.5-76-177-253.5t108.5-288Q403 75 602.5 98t230 212.5Q863 500 819 672.5Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+
+}
+
+.magicpattern4 {
+  position: absolute;
+  width: 30%;
+  height: 40%;
+
+  top: 0;
+  right: 0;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%234158D0%22%2F%3E%3Cstop offset=%2250%25%22 stop-color=%22%23C850C0%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23ffcc70%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M904.5 664Q828 828 664 913t-330.5 2.5q-166.5-82.5-226-249t4-329q63.5-162.5 226-237T668 95q168 69 240.5 237t-4 332Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M904.5 664Q828 828 664 913t-330.5 2.5q-166.5-82.5-226-249t4-329q63.5-162.5 226-237T668 95q168 69 240.5 237t-4 332Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+
+}
+
+.magicpattern5 {
+  position: absolute;
+  bottom: 0;
+
+  width: 24%;
+  height: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%2321D4FD%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23B721FF%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M872.5 664Q762 828 581.5 881.5t-295-85Q172 658 135 482t114.5-295.5Q401 67 570 134t291 216.5Q983 500 872.5 664Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M872.5 664Q762 828 581.5 881.5t-295-85Q172 658 135 482t114.5-295.5Q401 67 570 134t291 216.5Q983 500 872.5 664Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+
+}
+
+
+
+/* Vanta Background  start*/
+
+#vanta {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Vanta background end */
+
+main {
+  position: relative;
+  margin-block: 2em;
+}
+/* header start */
+
+.header {
+  max-width: 60em;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px) saturate(110%) contrast(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(110%) contrast(180%);
+
+  margin-inline: auto;
+
+  border-radius: 0 0 5em 5em;
+
+  padding-inline: auto;
+}
+
+.head__image{
+  padding: 1em;
+}
+
+.head__image img {
+  height: 10em;
+  width: 10em;
+  border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.head__image h1 {
+  font-size: 1.3em;
+  color: black;
+  border: 1px solid white;
+  border-radius: 1em 0.3em 1em 0.3em;
+  padding: 0.3em 0.6em;
+
+  backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  margin-top: 1em;
+}
+
+.head__subtitle{
+  font-family: 'Mochiy Pop One', sans-serif;
+  color: black;
+  text-decoration: none ;
+  line-height: 2em;
+}
+
+.head__subtitle p{
+  font-weight: 700;
+}
+
+.head__subtitle .first{
+  font-weight: 900;
+  color: cornflowerblue;
+  padding-block: .5em;
+  text-decoration: underline;
+}
+
+.head__subtitle .second{
+  font-weight: 600;
+  color: rgb(78, 59, 13);
+}
+.head__subtitle .third{
+  font-weight: 400;
+  color: rgb(13, 78, 70);
+  padding-inline: 1em;
+}
+
+/* header end */
+
+/* main start */
+
+ul {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0 auto;
+  padding: 2em;
+  /* min-width: 10em; */
+  max-width: 60em;
+}
+
+li {
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.373);
+  border-radius: 5em 2em 5em 2em;
+
+  padding: 0.5em;
+  margin: 1.4em 0;
+  
+  -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+}
+
+li:hover{
+  border-radius: 2em 5em 2em 5em;
+  transition: .5s ease-in-out;
+  font-weight: 700;
+
+  -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  backdrop-filter: blur(10px) saturate(160%) contrast(180%);
+  
+}
+
+ul li img {
+  height: 3em;
+}
+
+ul li a {
+  font-size: 1em;
+  height: 3em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* main end */
+
+
+@media (max-width: 700px) {
+  .header {
+    margin-inline: auto;
+    border-radius: 0 0 2em 2em;
+    height: 60vh;
+  }
+
+  .magicpattern2 {
+    height: 100%;
+    width: 100%;
+  }
+}
