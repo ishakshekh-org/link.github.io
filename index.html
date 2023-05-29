@@ -20,8 +20,50 @@
     />
   </head>
 
+
+  
   <body>
-    <!-- <div id="vanta"></div> -->
+    
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        VANTA.BIRDS({
+          el: "#vanta",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          birdSize: 1.4,
+          wingSpan: 40.0,
+          speedLimit: 3.0,
+          separation: 100.0,
+          alignment: 100.0,
+          cohesion: 100.0,
+          quantity: 4.0,
+          backgroundAlpha: 0.0,
+        });
+
+        // setTimeout(() => {
+        //     const main = document.querySelector('main')
+        //     main.style.opacity = 1
+        //     main.style.filter = 'blur(0px)'
+        // }, 500)
+      });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    <div id="vanta"></div>
     <div class="blobss">
       <div class="magicpattern animated_blob indexing"></div>
 
@@ -91,35 +133,6 @@
 
     <!-- animated background using vanta js -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        VANTA.BIRDS({
-          el: "#vanta",
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          birdSize: 1.4,
-          wingSpan: 40.0,
-          speedLimit: 3.0,
-          separation: 100.0,
-          alignment: 100.0,
-          cohesion: 100.0,
-          quantity: 4.0,
-          backgroundAlpha: 0.0,
-        });
 
-        // setTimeout(() => {
-        //     const main = document.querySelector('main')
-        //     main.style.opacity = 1
-        //     main.style.filter = 'blur(0px)'
-        // }, 500)
-      });
-    </script>
   </body>
 </html>
