@@ -18,7 +18,8 @@
   font-family: 'Azeret Mono', monospace;
   font-weight: 500;
   font-size: 1em;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
+  transition: 50ms;
 }
 
 .indexing {
@@ -51,21 +52,28 @@ body {
     radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
     radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
     radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
-  /* background-position: center; */
+  background-position: center;
   background-position: 300% 300%;
   background-size: 400% 400%;
   background-repeat: no-repeat;
 
-  animation: color 10s ease-in-out infinite;
-  overflow-x: hidden;
+  animation: color 5s ease-in-out infinite;
+  transition: 5s;
+  /* overflow-x: hidden; */
 }
 
 @keyframes color {
   0% {
     background-position: 0 50%;
   }
+  25% {
+    background-position: 50% 70%;
+  }
   50% {
-    background-position: 100% 50%;
+    background-position: 70% 90%;
+  }
+  75% {
+    background-position: 30% 80%;
   }
   100% {
     background-position: 0 50%;
@@ -118,14 +126,13 @@ body {
 }
 
 .blobss{
-  height: 100%;
+   height: 100%;
   width: 100%;
-  z-index: -99;
-  position: absolute;
    top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
+  transform: translate(-50%, -50%); 
+  overflow: hidden;
+  position: fixed;
   
 }
 
@@ -156,7 +163,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-45%, -40%);
 
   background-size: contain;
   background-position: center;
@@ -210,19 +217,77 @@ body {
   background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%2321D4FD%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23B721FF%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M872.5 664Q762 828 581.5 881.5t-295-85Q172 658 135 482t114.5-295.5Q401 67 570 134t291 216.5Q983 500 872.5 664Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M872.5 664Q762 828 581.5 881.5t-295-85Q172 658 135 482t114.5-295.5Q401 67 570 134t291 216.5Q983 500 872.5 664Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 
 }
+.magicpattern6 {
+  position: absolute;
+  bottom: 0;
+  right: 40%;  
+  transform: translate(30%, 30%);
+
+
+  width: 20%;
+  height: 20%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%2321D4FD%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23B721FF%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M872.5 664Q762 828 581.5 881.5t-295-85Q172 658 135 482t114.5-295.5Q401 67 570 134t291 216.5Q983 500 872.5 664Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M872.5 664Q762 828 581.5 881.5t-295-85Q172 658 135 482t114.5-295.5Q401 67 570 134t291 216.5Q983 500 872.5 664Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  overflow: hidden;
+}
+.magicpattern7 {
+  position: absolute;
+  bottom: 10%;
+  left: 24%;  
+  transform: translate(50%, 40%);
+
+
+  width: 20%;
+  height: 20%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23FAD961%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23F76B1C%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M795 646.5q-61 146.5-230.5 230T259 821Q123 682 94 486.5T235.5 189Q406 87 604 104t225 206.5q27 189.5-34 336Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M795 646.5q-61 146.5-230.5 230T259 821Q123 682 94 486.5T235.5 189Q406 87 604 104t225 206.5q27 189.5-34 336Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  overflow: hidden;
+}
+.magicpattern8 {
+  position: absolute;
+  bottom: 40%;
+  right: 10%;  
+  transform: translate(50%, 40%);
+
+
+  width: 30%;
+  height: 30%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%23F4D03F%22%2F%3E%3Cstop offset=%2225%25%22 stop-color=%22%2316A085%22%2F%3E%3Cstop offset=%2250%25%22 stop-color=%22%239616a1%22%2F%3E%3Cstop offset=%2275%25%22 stop-color=%22%234c5796%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%23d89e00%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M787 713q-149 213-313 69T280.5 478.5Q251 319 406.5 314T749 404.5Q936 500 787 713Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M787 713q-149 213-313 69T280.5 478.5Q251 319 406.5 314T749 404.5Q936 500 787 713Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); overflow: hidden;
+}
+.magicpattern9 {
+  position: absolute;
+  top: 0%;
+  right: 30%;  
+  transform: translate(50%, 40%);
+
+
+  width: 50%;
+  height: 40%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22c%22 gradientTransform=%22rotate(-45 .5 .5)%22%3E%3Cstop offset=%220%25%22 stop-color=%22%234158D0%22%2F%3E%3Cstop offset=%2233.333%25%22 stop-color=%22%23C850C0%22%2F%3E%3Cstop offset=%2266.667%25%22 stop-color=%22%23ffcc70%22%2F%3E%3Cstop offset=%22100%25%22 stop-color=%22%238bff70%22%2F%3E%3C%2FlinearGradient%3E%3CclipPath id=%22b%22%3E%3Cpath fill=%22currentColor%22 d=%22M748.5 596Q562 692 434 666.5t-199-218Q164 256 388 205t385.5 122q161.5 173-25 269Z%22%2F%3E%3C%2FclipPath%3E%3Cfilter id=%22a%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E%3CfeFlood flood-color=%22%23fff%22 result=%22neutral-gray%22%2F%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22%2F%3E%3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22%2F%3E%3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E%3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%2F%3E%3C%2FfeComponentTransfer%3E%3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cg filter=%22url(%23a)%22 clip-path=%22url(%23b)%22%3E%3Cpath fill=%22url(%23c)%22 d=%22M748.5 596Q562 692 434 666.5t-199-218Q164 256 388 205t385.5 122q161.5 173-25 269Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
 
 
 
 /* Vanta Background  start*/
 
-#vanta {
+/* #vanta {
   z-index: 0;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
 /* Vanta background end */
 
@@ -242,8 +307,8 @@ main {
   text-align: center;
 
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px) saturate(110%) contrast(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(110%) contrast(180%);
+  backdrop-filter: blur(12px) saturate(110%) contrast(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(110%) contrast(180%);
 
   margin-inline: auto;
 
@@ -369,8 +434,27 @@ a {
     height: 60vh;
   }
 
+  .magicpattern{
+    top: 5%;
+    width: 50%;
+  }
+
   .magicpattern2 {
-    height: 100%;
-    width: 100%;
+    height: 70%;
+    width: 70%;
+  }
+  .magicpattern7 {
+    left: 10%;
+    bottom: 1%;
+  }
+
+  .magicpattern8{
+    top: 20%;
+    right: 5%;
+  }
+
+  .magicpattern3{
+    width: 40%;
+    bottom: 5%;
   }
 }
