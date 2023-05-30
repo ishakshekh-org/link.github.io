@@ -345,10 +345,12 @@ main {
   color: black;
   text-decoration: none ;
   line-height: 2em;
+  Padding-bottom : 10px;
 }
 
 .head__subtitle p{
   font-weight: 700;
+
 }
 
 .head__subtitle .first{
